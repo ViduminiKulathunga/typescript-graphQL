@@ -19,7 +19,7 @@ const authMiddleware = (req, res, next) => {
     next();
   } catch (error) {
     console.log(error);
-    res.status(500).json({
+    return res.status(500).json({
       success: false,
       message: "Access denied. No token provided. Please Log in",
     });
